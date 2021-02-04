@@ -30,7 +30,7 @@ namespace ModellenBureau.API
             services.AddDbContext<MBDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            //services.AddScoped<ICountryRepository, CountryRepository>();
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
             //services.AddScoped<IJobCategoryRepository, JobCategoryRepository>();
             //services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
