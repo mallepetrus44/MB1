@@ -12,21 +12,25 @@ namespace ModellenBureau.Main.Server.Models
         public int AppUserId { get; set; }
 
         // NAW gegevens
-
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string HomeAddress { get; set; }
-        public string Postal { get; set; }
-        public Country Country { get; set; }
+        [Required]
+        public string Voornaam { get; set; }
+        [Required]
+        public string Achternaam { get; set; }
+        [Required]
+        public string Adres { get; set; }
+        [Required]
+        public string Postcode { get; set; }
+        [Required]
+        public Country Land { get; set; }
 
     }
 
     public enum Country
     {
-        Belgium,
-        Germany,
-        Netherlands,
-        Other
+        België,
+        Duitsland,
+        Nederland,
+        Anders
 
     }
 }
