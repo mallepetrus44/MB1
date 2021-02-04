@@ -20,24 +20,48 @@ namespace ModellenBureau.API.Models
             return _mbDbContext.PhotoModels;
         }
 
-        public PhotoModel GetModelById(int modelId)
+        public PhotoModel GetModelById(int photoModelId)
         {
-            return _mbDbContext.PhotoModels.FirstOrDefault(t => t.PhotoModelID == modelId);
+            return _mbDbContext.PhotoModels.FirstOrDefault(p => p.PhotoModelID == photoModelId);
         }
 
-        public PhotoModel AddModel(int modelId)
+        public PhotoModel AddModel(PhotoModel photoModel)
         {
-            throw new NotImplementedException();
+            var addedEntity = _mbDbContext.PhotoModels.Add(photoModel);
+            _mbDbContext.SaveChanges();
+            return addedEntity.Entity;
         }
 
-        public PhotoModel UpdateModel(int modelId)
+        public PhotoModel UpdateModel(PhotoModel photoModel)
         {
-            throw new NotImplementedException();
+            var foundPhotoModel = _mbDbContext.PhotoModels.FirstOrDefault(p => p.PhotoModelID == photoModel.PhotoModelID);
+
+            if (foundPhotoModel != null)
+            {
+                foundPhotoModel.PhotoModelID = photoModel.PhotoModelID;
+                foundPhotoModel.Leeftijd = photoModel.Leeftijd;
+                foundPhotoModel.Geboortedatum = photoModel.Geboortedatum;
+                foundPhotoModel.Geslacht = photoModel.Geslacht;
+                foundPhotoModel.Bovenwijdte = photoModel.Bovenwijdte;
+                foundPhotoModel.Taillewijdte = photoModel.Taillewijdte;
+                foundPhotoModel.Heupwijdte = photoModel.Heupwijdte;
+                foundPhotoModel.Fotos = photoModel.Fotos;
+
+                _mbDbContext.SaveChanges();
+
+                return foundPhotoModel;
+            }
+
+            return null;
         }
 
-        public void DeleteModel(int modelId)
+        public void DeleteModel(int photoModelId)
         {
-            throw new NotImplementedException();
+            var foundPhotoModel = _mbDbContext.PhotoModels.FirstOrDefault(p => p.PhotoModelID == photoModelId);
+            if (foundPhotoModel == null) return;
+
+            _mbDbContext.PhotoModels.Remove(foundPhotoModel);
+            _mbDbContext.SaveChanges();
         }
     }
 }

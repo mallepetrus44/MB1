@@ -12,7 +12,9 @@ namespace ModellenBureau.Main.Shared
         public int Leeftijd
         {
             get { return (DateTime.Today - Geboortedatum).Days / 365; }
+            set { }
         }
+        
 
         [Required]
         [DataType(DataType.Date)]
