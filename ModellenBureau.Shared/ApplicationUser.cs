@@ -9,7 +9,7 @@ namespace ModellenBureau.Main.Server.Models
     public class User
     {
         // ID voor de ApplicationUser
-        public Guid AppUserId { get; set; }
+        public int AppUserId { get; set; }
 
         // NAW gegevens
 

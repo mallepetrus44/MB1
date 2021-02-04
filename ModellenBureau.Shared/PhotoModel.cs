@@ -8,7 +8,7 @@ namespace ModellenBureau.Main.Server.Models
 {
     public class PhotoModel : User
     {
-
+        public int PhotoModelID { get; set; }
         public int Leeftijd
         {
             get { return (DateTime.Today - Geboortedatum).Days / 365; }

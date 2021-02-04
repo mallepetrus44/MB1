@@ -7,6 +7,7 @@ namespace ModellenBureau.Main.Server.Models
 {
     public class Customer : User
     {
+        public int CustomerID { get; set; }
         public string Logo { get; set; }
 
         public int KvkNummer { get; set; }
