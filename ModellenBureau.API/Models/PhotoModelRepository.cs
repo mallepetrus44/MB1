@@ -15,24 +15,24 @@ namespace ModellenBureau.API.Models
             _mbDbContext = mbDbContext;
         }
 
-        public IEnumerable<PhotoModel> GetAllModels()
+        public IEnumerable<PhotoModel> GetAllPhotoModels()
         {
             return _mbDbContext.PhotoModels;
         }
 
-        public PhotoModel GetModelById(int photoModelId)
+        public PhotoModel GetPhotoModelById(int photoModelId)
         {
             return _mbDbContext.PhotoModels.FirstOrDefault(p => p.PhotoModelID == photoModelId);
         }
 
-        public PhotoModel AddModel(PhotoModel photoModel)
+        public PhotoModel AddPhotoModel(PhotoModel photoModel)
         {
             var addedEntity = _mbDbContext.PhotoModels.Add(photoModel);
             _mbDbContext.SaveChanges();
             return addedEntity.Entity;
         }
 
-        public PhotoModel UpdateModel(PhotoModel photoModel)
+        public PhotoModel UpdatePhotoModel(PhotoModel photoModel)
         {
             var foundPhotoModel = _mbDbContext.PhotoModels.FirstOrDefault(p => p.PhotoModelID == photoModel.PhotoModelID);
 
@@ -55,7 +55,7 @@ namespace ModellenBureau.API.Models
             return null;
         }
 
-        public void DeleteModel(int photoModelId)
+        public void DeletePhotoModel(int photoModelId)
         {
             var foundPhotoModel = _mbDbContext.PhotoModels.FirstOrDefault(p => p.PhotoModelID == photoModelId);
             if (foundPhotoModel == null) return;
