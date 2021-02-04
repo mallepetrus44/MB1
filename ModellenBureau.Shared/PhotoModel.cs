@@ -17,6 +17,8 @@ namespace ModellenBureau.Main.Server.Models
         [Required]
         [DataType(DataType.Date)]
         public DateTime Geboortedatum { get; set; }
+        [Required]
+        public Geslacht Geslacht { get; set; }
 
         [Required]
         public double Bovenwijdte { get; set; }
@@ -27,5 +29,11 @@ namespace ModellenBureau.Main.Server.Models
 
         [DataType(DataType.ImageUrl)]
         public string Fotos { get; set; }
+    }
+
+    public enum Geslacht
+    {
+        Man, 
+        Vrouw
     }
 }
