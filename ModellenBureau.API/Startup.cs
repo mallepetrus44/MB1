@@ -31,7 +31,7 @@ namespace ModellenBureau.API
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
-            //services.AddScoped<IJobCategoryRepository, JobCategoryRepository>();
+            services.AddScoped<IPhotoModelRepository, PhotoModelRepository>();
             //services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             services.AddCors(options =>
