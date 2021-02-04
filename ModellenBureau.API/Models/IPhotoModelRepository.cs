@@ -8,10 +8,10 @@ namespace ModellenBureau.API.Models
 {
     public interface IPhotoModelRepository
     {
-        IEnumerable<PhotoModel> GetAllModels();
-        PhotoModel GetModelById(int photoModelId);
-        PhotoModel AddModel(PhotoModel photoModel);
-        PhotoModel UpdateModel(PhotoModel photoModel);
-        void DeleteModel(int photoModelId);
+        IEnumerable<PhotoModel> GetAllPhotoModels();
+        PhotoModel GetPhotoModelById(int photoModelId);
+        PhotoModel AddPhotoModel(PhotoModel photoModel);
+        PhotoModel UpdatePhotoModel(PhotoModel photoModel);
+        void DeletePhotoModel(int photoModelId);
     }
 }
