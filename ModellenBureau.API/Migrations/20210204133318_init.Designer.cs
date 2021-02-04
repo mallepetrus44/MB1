@@ -10,8 +10,8 @@ using ModellenBureau.API.Models;
 namespace ModellenBureau.API.Migrations
 {
     [DbContext(typeof(MBDbContext))]
-    [Migration("20210204122208_init2")]
-    partial class init2
+    [Migration("20210204133318_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,38 +21,45 @@ namespace ModellenBureau.API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.2");
 
-            modelBuilder.Entity("ModellenBureau.Main.Server.Models.Customer", b =>
+            modelBuilder.Entity("ModellenBureau.Main.Shared.Customer", b =>
                 {
                     b.Property<int>("CustomerID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Achternaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Adres")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
                     b.Property<string>("BtwNummer")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Country")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HomeAddress")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("KvkNummer")
+                        .HasMaxLength(8)
                         .HasColumnType("int");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Land")
+                        .HasColumnType("int");
 
                     b.Property<string>("Logo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Postal")
+                    b.Property<string>("Postcode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Voornaam")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CustomerID");
@@ -60,12 +67,20 @@ namespace ModellenBureau.API.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("ModellenBureau.Main.Server.Models.PhotoModel", b =>
+            modelBuilder.Entity("ModellenBureau.Main.Shared.PhotoModel", b =>
                 {
                     b.Property<int>("PhotoModelID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
+
+                    b.Property<string>("Achternaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Adres")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
@@ -73,32 +88,31 @@ namespace ModellenBureau.API.Migrations
                     b.Property<double>("Bovenwijdte")
                         .HasColumnType("float");
 
-                    b.Property<int>("Country")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Fotos")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Geboortedatum")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Geslacht")
+                        .HasColumnType("int");
+
                     b.Property<double>("Heupwijdte")
                         .HasColumnType("float");
 
-                    b.Property<string>("HomeAddress")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Land")
+                        .HasColumnType("int");
 
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Postal")
+                    b.Property<string>("Postcode")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Taillewijdte")
                         .HasColumnType("float");
+
+                    b.Property<string>("Voornaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PhotoModelID");
 

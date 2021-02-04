@@ -19,7 +19,7 @@ namespace ModellenBureau.API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.2");
 
-            modelBuilder.Entity("ModellenBureau.Main.Server.Models.Customer", b =>
+            modelBuilder.Entity("ModellenBureau.Main.Shared.Customer", b =>
                 {
                     b.Property<int>("CustomerID")
                         .ValueGeneratedOnAdd()
@@ -38,15 +38,18 @@ namespace ModellenBureau.API.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("BtwNummer")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("KvkNummer")
+                        .HasMaxLength(8)
                         .HasColumnType("int");
 
                     b.Property<int>("Land")
                         .HasColumnType("int");
 
                     b.Property<string>("Logo")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Postcode")
@@ -62,7 +65,7 @@ namespace ModellenBureau.API.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("ModellenBureau.Main.Server.Models.PhotoModel", b =>
+            modelBuilder.Entity("ModellenBureau.Main.Shared.PhotoModel", b =>
                 {
                     b.Property<int>("PhotoModelID")
                         .ValueGeneratedOnAdd()
@@ -88,6 +91,9 @@ namespace ModellenBureau.API.Migrations
 
                     b.Property<DateTime>("Geboortedatum")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Geslacht")
+                        .HasColumnType("int");
 
                     b.Property<double>("Heupwijdte")
                         .HasColumnType("float");

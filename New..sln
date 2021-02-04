@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModellenBureau.Shared", "ModellenBureau.Shared\ModellenBureau.Shared.csproj", "{D5FD79F6-A9D8-4174-B07B-365B24FBE489}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModellenBureau.Shared", "ModellenBureau.Shared\ModellenBureau.Shared.csproj", "{D5FD79F6-A9D8-4174-B07B-365B24FBE489}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModellenBureau.Server", "ModellenBureau.Server\ModellenBureau.Server.csproj", "{45ADCB05-066F-46CF-B1A7-4F3715A05E82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModellenBureau.Server", "ModellenBureau.Server\ModellenBureau.Server.csproj", "{45ADCB05-066F-46CF-B1A7-4F3715A05E82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModellenBureau.API", "ModellenBureau.API\ModellenBureau.API.csproj", "{8DE73B5F-E558-4D8D-B826-5A339DA43CD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModellenBureau.API", "ModellenBureau.API\ModellenBureau.API.csproj", "{8DE73B5F-E558-4D8D-B826-5A339DA43CD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

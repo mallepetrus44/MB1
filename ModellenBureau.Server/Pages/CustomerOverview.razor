@@ -1,0 +1,44 @@
+﻿@page "/customeroverview"
+@inherits CustomerOverviewBase
+
+<h1 class="page-title">Alle Klanten</h1>
+
+@if (Customers == null)
+{
+<p><em>Loading...</em></p> }
+            else
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            @*<th></th>*@
+                            <th>Klantnummer</th>
+                            <th>Voornaam</th>
+                            <th>Achternaam</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var customer in Customers)
+                        {
+        <tr>
+            @*<td><img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeeId}-small.jpg")" class="rounded-circle" /></td>*@
+            <td>@customer.CustomerID</td>
+            <td>@customer.Voornaam</td>
+            <td>@customer.Achternaam</td>
+            <td>
+                <a href="@($"employeedetail/{customer.CustomerID}")" class="btn btn-primary table-btn">
+                    <i class="fas fa-info-circle"></i>
+                </a>
+                <a href="@($"employeeedit/{customer.CustomerID}")" class="btn btn-primary table-btn">
+                    <i class="fas fa-edit"></i>
+                </a>
+            </td>
+        </tr>}
+                    </tbody>
+                </table>
+            }
+
+@*<button @onclick="@QuickAddEmployee" class="btn btn-dark table-btn quick-add-btn">&nbsp;&nbsp;+&nbsp;&nbsp;</button>
+
+    <AddEmployeeDialog @ref="AddEmployeeDialog" CloseEventCallback="@AddEmployeeDialog_OnDialogClose"></AddEmployeeDialog>*@
