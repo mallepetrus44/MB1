@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ModellenBureau.Server.Services;
+using Syncfusion.Blazor;
 using System;
 using System.Collections.Generic;
 using System.Linq;

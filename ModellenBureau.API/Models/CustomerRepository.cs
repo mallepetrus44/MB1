@@ -52,7 +52,6 @@ namespace ModellenBureau.API.Models
                 updateCustomer.Achternaam = customer.Adres;
                 updateCustomer.Adres = customer.Adres;
                 updateCustomer.Postcode = customer.Postcode;
-                updateCustomer.Land = customer.Land;
                 updateCustomer.Logo = customer.Logo;
                 updateCustomer.KvkNummer = customer.KvkNummer;
                 updateCustomer.BtwNummer = customer.BtwNummer;

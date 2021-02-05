@@ -27,10 +27,10 @@
             <td>@customer.Voornaam</td>
             <td>@customer.Achternaam</td>
             <td>
-                <a href="@($"employeedetail/{customer.CustomerID}")" class="btn btn-primary table-btn">
+                @*<a href="@($"employeedetail/{customer.CustomerID}")" class="btn btn-primary table-btn">
                     <i class="fas fa-info-circle"></i>
-                </a>
-                <a href="@($"employeeedit/{customer.CustomerID}")" class="btn btn-primary table-btn">
+                </a>*@
+                <a href="@($"customeredit/{customer.CustomerID}")" class="btn btn-primary table-btn">
                     <i class="fas fa-edit"></i>
                 </a>
             </td>
@@ -39,6 +39,6 @@
                 </table>
             }
 
-@*<button @onclick="@QuickAddEmployee" class="btn btn-dark table-btn quick-add-btn">&nbsp;&nbsp;+&nbsp;&nbsp;</button>
+<button @onclick="@QuickAddCustomer" class="btn btn-dark table-btn quick-add-btn">&nbsp;&nbsp;+&nbsp;&nbsp;</button>
 
-    <AddEmployeeDialog @ref="AddEmployeeDialog" CloseEventCallback="@AddEmployeeDialog_OnDialogClose"></AddEmployeeDialog>*@
+    <QuickRegisterCustomer @ref="QuickRegisterCustomer" CloseEventCallback="@QuickRegisterCustomer_OnDialogClose"></QuickRegisterCustomer>

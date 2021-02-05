@@ -6,6 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Syncfusion.Blazor" Version="18.4.0.41" />
+    <PackageReference Include="Syncfusion.Blazor.Buttons" Version="18.4.0.41" />
+    <PackageReference Include="Syncfusion.Blazor.Calendars" Version="18.4.0.41" />
+    <PackageReference Include="Syncfusion.Blazor.Inputs" Version="18.4.0.41" />
+    <PackageReference Include="Syncfusion.Blazor.Popups" Version="18.4.0.41" />
   </ItemGroup>
 
   <ItemGroup>

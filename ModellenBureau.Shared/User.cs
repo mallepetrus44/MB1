@@ -20,17 +20,7 @@ namespace ModellenBureau.Main.Shared
         public string Adres { get; set; }
         [Required]
         public string Postcode { get; set; }
-        [Required]
-        public Country Land { get; set; }
 
     }
 
-    public enum Country
-    {
-        België,
-        Duitsland,
-        Nederland,
-        Anders
-
-    }
 }

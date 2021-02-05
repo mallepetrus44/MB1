@@ -24,15 +24,15 @@ namespace ModellenBureau.Server.Pages
 
         public Customer Customer { get; set; } = new Customer();
 
-        //needed to bind to select to value
-        protected string CountryId = string.Empty;
+        ////needed to bind to select to value
+        //protected string CountryId = string.Empty;
 
         //used to store state of screen
         protected string Message = string.Empty;
         protected string StatusClass = string.Empty;
         protected bool Saved;
 
-        public List<Country> Countries { get; set; } = new List<Country>();
+        //public List<Country> Countries { get; set; } = new List<Country>();
 
         protected override async Task OnInitializedAsync()
         {
