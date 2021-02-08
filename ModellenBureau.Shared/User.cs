@@ -20,7 +20,8 @@ namespace ModellenBureau.Main.Shared
         public string Adres { get; set; }
         [Required]
         public string Postcode { get; set; }
-
+        [Required]
+        public string Stad { get; set; }
     }
 
 }
