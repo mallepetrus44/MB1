@@ -13,7 +13,6 @@ namespace ModellenBureau.Main.Shared
         [Required]
         public string Logo { get; set; }
         [Required]
-        [MaxLength(8), MinLength(8)]
         public int KvkNummer { get; set; }
         [Required]
         public string BtwNummer { get; set; }
