@@ -33,7 +33,8 @@ namespace ModellenBureau.API.Models
                 Achternaam = "Janssen",
                 Adres = "Verdilaan 107",
                 Stad = "Vlissingen",
-                Postcode = "4384 LG"
+                Postcode = "4384 LG",
+                Logo =""
             });
             modelBuilder.Entity<Customer>().HasData(new Customer
             {
@@ -46,7 +47,8 @@ namespace ModellenBureau.API.Models
                 Achternaam = "Gerritsen",
                 Adres = "Uiterburen 13",
                 Stad = "Groningen",
-                Postcode = "9636 EC"
+                Postcode = "9636 EC",
+                Logo=""
             });
 
 
