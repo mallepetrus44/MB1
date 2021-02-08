@@ -34,10 +34,4 @@ namespace ModellenBureau.Main.Shared
         [DataType(DataType.ImageUrl)]
         public string Fotos { get; set; }
     }
-
-    public enum Geslacht
-    {
-        Man, 
-        Vrouw
-    }
 }
