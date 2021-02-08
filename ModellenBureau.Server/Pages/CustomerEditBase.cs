@@ -39,17 +39,17 @@ namespace ModellenBureau.Server.Pages
             Saved = false;
             //Countries = (await CountryDataService.GetAllCountries()).ToList();       
 
-            //int.TryParse(CustomerId, out var CustomerId);
+            int.TryParse(CustomerId, out var CustomerID);
 
-            //if (CustomerId == 0) //new Customer is being created
-            //{
-            //    //add some defaults
-            //    Customer = new Customer { CountryId = 1, JobCategoryId = 1, BirthDate = DateTime.Now, JoinedDate = DateTime.Now };
-            //}
-            //else
-            //{
-            //    Customer = await CustomerDataService.GetCustomerDetails(int.Parse(CustomerId));
-            //}
+            if (CustomerID == 0) //new Customer is being created
+            {
+                //add some defaults
+                Customer = new Customer {};
+            }
+            else
+            {
+                Customer = await CustomerDataService.GetCustomerDetails(int.Parse(CustomerId));
+            }
 
             //CountryId = Customer.CountryId.ToString();
             //JobCategoryId = Customer.JobCategoryId.ToString();

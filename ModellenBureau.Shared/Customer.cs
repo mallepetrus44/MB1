@@ -8,7 +8,6 @@ namespace ModellenBureau.Main.Shared
 {
     public class Customer : User
     {
-        [Required]
         public int CustomerID { get; set; }
 
         [Required]
