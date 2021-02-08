@@ -34,7 +34,7 @@
                         <label for="BtwNummer">BtwNummer </label>
                         <InputText id="BtwNummer" class="form-control" @bind-Value="@Customer.BtwNummer" placeholder="Uw BTW-nummer"></InputText>
                         <ValidationMessage For="@(() => Customer.BtwNummer)" />
-                    </div>                    
+                    </div>
                     <button type="submit" class="btn btn-primary">Opslaan</button>
                     <a class="btn btn-outline-primary" @onclick="@Close">Sluiten</a>
                 </EditForm>
@@ -42,5 +42,4 @@
             </div>
         </div>
     </div>
-</div>
-}
+</div>}

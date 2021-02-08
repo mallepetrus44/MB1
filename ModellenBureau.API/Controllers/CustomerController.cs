@@ -33,10 +33,10 @@ namespace ModellenBureau.API.Controllers
             if (customer == null)
                 return BadRequest();
 
-            if (customer.Voornaam == string.Empty || customer.Achternaam == string.Empty)
-            {
-                ModelState.AddModelError("Voornaam", "Voornaam is een verplicht veld");
-            }
+            //if (customer.Voornaam == string.Empty || customer.Achternaam == string.Empty)
+            //{
+            //    ModelState.AddModelError("Voornaam", "Voornaam is een verplicht veld");
+            //}
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -52,10 +52,10 @@ namespace ModellenBureau.API.Controllers
             if (customer == null)
                 return BadRequest();
 
-            if (customer.Voornaam == string.Empty || customer.Achternaam == string.Empty)
-            {
-                ModelState.AddModelError("Achternaam", "Achternaam is een verplicht veld");
-            }
+            //if (customer.Voornaam == string.Empty || customer.Achternaam == string.Empty)
+            //{
+            //    ModelState.AddModelError("Achternaam", "Achternaam is een verplicht veld");
+            //}
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
