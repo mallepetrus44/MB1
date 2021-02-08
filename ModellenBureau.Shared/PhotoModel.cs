@@ -23,11 +23,13 @@ namespace ModellenBureau.Main.Shared
         public Geslacht Geslacht { get; set; }
 
         [Required]
-        public double Bovenwijdte { get; set; }
+        public int Bovenwijdte { get; set; }
         [Required]
-        public double Taillewijdte { get; set; }
+        public int Taillewijdte { get; set; }
         [Required]
-        public double Heupwijdte { get; set; }
+        public int Heupwijdte { get; set; }
+        [Required]
+        public int Lengte { get; set; }
 
         [DataType(DataType.ImageUrl)]
         public string Fotos { get; set; }
