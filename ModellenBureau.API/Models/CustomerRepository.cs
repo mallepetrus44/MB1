@@ -49,12 +49,13 @@ namespace ModellenBureau.API.Models
             if (updateCustomer != null)
             {
                 updateCustomer.Voornaam = customer.Voornaam;
-                updateCustomer.Achternaam = customer.Adres;
+                updateCustomer.Achternaam = customer.Achternaam;
                 updateCustomer.Adres = customer.Adres;
                 updateCustomer.Postcode = customer.Postcode;
                 updateCustomer.Logo = customer.Logo;
                 updateCustomer.KvkNummer = customer.KvkNummer;
                 updateCustomer.BtwNummer = customer.BtwNummer;
+                updateCustomer.Stad = customer.Stad;
 
                 _mBDbContext.SaveChanges();
 
