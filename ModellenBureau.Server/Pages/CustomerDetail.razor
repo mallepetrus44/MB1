@@ -1,0 +1,57 @@
+﻿@page "/customerdetail/{CustomerId}"
+@inherits CustomerDetailBase
+
+<section class="customer-detail">
+    <h1 class="page-title">Details for @Customer.Voornaam @Customer.Achternaam</h1>
+
+    @{ var leadingFormat = "00000";
+        //var a = Employee.EmployeeId.ToString("00000"); }
+    }
+    <div class="col-12 row">
+        <div class="col-10 row">
+            <div class="col-xs-12 col-sm-8">
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Klantnummer</label>
+                <div class="col-sm-8">
+                    <label type="text" class="form-control-plaintext">@Customer.CustomerID.ToString(leadingFormat)</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Voornaam</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Customer.Voornaam</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Achternaam</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Customer.Achternaam</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Adres</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Customer.Adres</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Postcode</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Customer.Postcode</label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label">Plaatsnaam</label>
+                <div class="col-sm-8">
+                    <label type="text" readonly class="form-control-plaintext">@Customer.Stad</label>
+                </div>
+            </div>
+                </div>
+        </div>
+    </div>
+</section>
