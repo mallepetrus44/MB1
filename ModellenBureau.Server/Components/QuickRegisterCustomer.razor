@@ -31,9 +31,34 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="BtwNummer">BtwNummer </label>
+                        <label for="BtwNummer">Btw Nummer </label>
                         <InputText id="BtwNummer" class="form-control" @bind-Value="@Customer.BtwNummer" placeholder="Uw BTW-nummer"></InputText>
                         <ValidationMessage For="@(() => Customer.BtwNummer)" />
+                    </div>
+                    <div class="form-group">
+                        <label for="KvkNummer">Kvk Nummer </label>
+                        <InputNumber id="KvkNummer" class="form-control" @bind-Value="@Customer.KvkNummer" placeholder="Uw KvK-nummer"></InputNumber>
+                        <ValidationMessage For="@(() => Customer.KvkNummer)" />
+                    </div>
+                    <div class="form-group">
+                        <label for="logo">Logo </label>
+                        <InputText id="logo" class="form-control" @bind-Value="@Customer.Logo" placeholder="Uw Logo"></InputText>
+                        <ValidationMessage For="@(() => Customer.Logo)" />
+                    </div>
+                    <div class="form-group">
+                        <label for="adres">Adres </label>
+                        <InputText id="adres" class="form-control" @bind-Value="@Customer.Adres" placeholder="Adres"></InputText>
+                        <ValidationMessage For="@(() => Customer.Adres)" />
+                    </div>
+                    <div class="form-group">
+                        <label for="postcode">Postcode </label>
+                        <InputText id="postcode" class="form-control" @bind-Value="@Customer.Postcode" placeholder="Postcode"></InputText>
+                        <ValidationMessage For="@(() => Customer.Postcode)" />
+                    </div>
+                    <div class="form-group">
+                        <label for="stad">Plaatsnaam </label>
+                        <InputText id="stad" class="form-control" @bind-Value="@Customer.Stad" placeholder="Plaatsnaam"></InputText>
+                        <ValidationMessage For="@(() => Customer.Stad)" />
                     </div>
                     <button type="submit" class="btn btn-primary">Opslaan</button>
                     <a class="btn btn-outline-primary" @onclick="@Close">Sluiten</a>

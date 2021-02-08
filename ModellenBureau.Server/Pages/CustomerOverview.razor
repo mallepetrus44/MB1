@@ -15,26 +15,32 @@
                             <th>Klantnummer</th>
                             <th>Voornaam</th>
                             <th>Achternaam</th>
+                            <th>Adres</th>
+                            <th>Postcode</th>
+                            <th>Plaatsnaam</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var customer in Customers)
                         {
-        <tr>
-            @*<td><img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeeId}-small.jpg")" class="rounded-circle" /></td>*@
-            <td>@customer.CustomerID</td>
-            <td>@customer.Voornaam</td>
-            <td>@customer.Achternaam</td>
-            <td>
-                @*<a href="@($"employeedetail/{customer.CustomerID}")" class="btn btn-primary table-btn">
-                    <i class="fas fa-info-circle"></i>
-                </a>*@
-                <a href="@($"customeredit/{customer.CustomerID}")" class="btn btn-primary table-btn">
-                    <i class="fas fa-edit"></i>
-                </a>
-            </td>
-        </tr>}
+                        <tr>
+                            @*<td><img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeeId}-small.jpg")" class="rounded-circle" /></td>*@
+                            <td>@customer.CustomerID</td>
+                            <td>@customer.Voornaam</td>
+                            <td>@customer.Achternaam</td>
+                            <td>@customer.Adres</td>
+                            <td>@customer.Postcode</td>
+                            <td>@customer.Stad</td>
+                            <td>
+                                <a href="@($"customerdetail/{customer.CustomerID}")" class="btn btn-primary table-btn">
+                                    <i class="fas fa-info-circle"></i>
+                                </a>
+                                <a href="@($"customeredit/{customer.CustomerID}")" class="btn btn-primary table-btn">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                            </td>
+                        </tr>}
                     </tbody>
                 </table>
             }
