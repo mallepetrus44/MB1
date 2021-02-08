@@ -38,14 +38,19 @@ namespace ModellenBureau.API.Models
 
             if (foundPhotoModel != null)
             {
-                foundPhotoModel.PhotoModelID = photoModel.PhotoModelID;
                 foundPhotoModel.Leeftijd = photoModel.Leeftijd;
                 foundPhotoModel.Geboortedatum = photoModel.Geboortedatum;
                 foundPhotoModel.Geslacht = photoModel.Geslacht;
                 foundPhotoModel.Bovenwijdte = photoModel.Bovenwijdte;
                 foundPhotoModel.Taillewijdte = photoModel.Taillewijdte;
                 foundPhotoModel.Heupwijdte = photoModel.Heupwijdte;
+                foundPhotoModel.Lengte = photoModel.Lengte;
                 foundPhotoModel.Fotos = photoModel.Fotos;
+                foundPhotoModel.Voornaam = photoModel.Voornaam;
+                foundPhotoModel.Achternaam = photoModel.Achternaam;
+                foundPhotoModel.Adres = photoModel.Adres;
+                foundPhotoModel.Postcode = photoModel.Postcode;
+                foundPhotoModel.Stad = photoModel.Stad;
 
                 _mbDbContext.SaveChanges();
 
