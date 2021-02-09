@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
-using ModellenBureau.Main.Shared;
+using ModellenBureau.Shared;
 using ModellenBureau.Server.Services;
 using System;
 using System.Collections.Generic;

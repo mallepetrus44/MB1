@@ -1,4 +1,4 @@
-﻿using ModellenBureau.Main.Shared;
+﻿using ModellenBureau.Shared;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;

@@ -1,4 +1,4 @@
-﻿using ModellenBureau.Main.Shared;
+﻿using ModellenBureau.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +56,7 @@ namespace ModellenBureau.API.Models
                 updateCustomer.KvkNummer = customer.KvkNummer;
                 updateCustomer.BtwNummer = customer.BtwNummer;
                 updateCustomer.Stad = customer.Stad;
+                updateCustomer.Verified = false;
 
                 _mBDbContext.SaveChanges();
 

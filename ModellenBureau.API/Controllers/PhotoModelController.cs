@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ModellenBureau.API.Models;
-using ModellenBureau.Main.Shared;
+using ModellenBureau.Shared;
 
 namespace ModellenBureau.API.Controllers
 {

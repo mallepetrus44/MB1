@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ModellenBureau.Main.Shared
+namespace ModellenBureau.Shared
 {
     public class Customer : User
     {

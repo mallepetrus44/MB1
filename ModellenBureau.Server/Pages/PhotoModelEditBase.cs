@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using ModellenBureau.Main.Shared;
+using ModellenBureau.Shared;
 using ModellenBureau.Server.Services;
 
 namespace ModellenBureau.Server.Pages

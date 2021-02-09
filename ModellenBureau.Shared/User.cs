@@ -4,12 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ModellenBureau.Main.Shared
+namespace ModellenBureau.Shared
 {
     public class User
     {
-        // ID voor de ApplicationUser
         public int AppUserId { get; set; }
+        [Required]
+        public bool Verified { get; set; }
 
         // NAW gegevens
         [Required]
@@ -22,6 +23,11 @@ namespace ModellenBureau.Main.Shared
         public string Postcode { get; set; }
         [Required]
         public string Stad { get; set; }
+        [Required]
+        public string Email { get; set; }
+        [Required]
+        public string Paswoord { get; set; }
+
     }
 
 }

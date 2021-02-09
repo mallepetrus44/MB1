@@ -1,4 +1,4 @@
-﻿namespace ModellenBureau.Main.Shared
+﻿namespace ModellenBureau.Shared
 {
     public enum Geslacht
     {

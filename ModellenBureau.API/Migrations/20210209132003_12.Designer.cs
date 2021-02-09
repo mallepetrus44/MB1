@@ -10,8 +10,8 @@ using ModellenBureau.API.Models;
 namespace ModellenBureau.API.Migrations
 {
     [DbContext(typeof(MBDbContext))]
-    [Migration("20210208140426_test1")]
-    partial class test1
+    [Migration("20210209132003_12")]
+    partial class _12
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -58,6 +58,9 @@ namespace ModellenBureau.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Verified")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Voornaam")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -78,6 +81,7 @@ namespace ModellenBureau.API.Migrations
                             Logo = "",
                             Postcode = "4384 LG",
                             Stad = "Vlissingen",
+                            Verified = false,
                             Voornaam = "Klaas"
                         },
                         new
@@ -91,6 +95,7 @@ namespace ModellenBureau.API.Migrations
                             Logo = "",
                             Postcode = "9636 EC",
                             Stad = "Groningen",
+                            Verified = false,
                             Voornaam = "Angelina"
                         });
                 });
@@ -145,6 +150,9 @@ namespace ModellenBureau.API.Migrations
                     b.Property<int>("Taillewijdte")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Verified")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Voornaam")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -170,6 +178,7 @@ namespace ModellenBureau.API.Migrations
                             Postcode = "1353 LT",
                             Stad = "Almere",
                             Taillewijdte = 61,
+                            Verified = false,
                             Voornaam = "Fleur"
                         },
                         new
@@ -188,6 +197,7 @@ namespace ModellenBureau.API.Migrations
                             Postcode = "3565 BG",
                             Stad = "Utrecht",
                             Taillewijdte = 59,
+                            Verified = false,
                             Voornaam = "Lynn"
                         },
                         new
@@ -206,6 +216,7 @@ namespace ModellenBureau.API.Migrations
                             Postcode = "1826 CS",
                             Stad = "Alkmaar",
                             Taillewijdte = 81,
+                            Verified = false,
                             Voornaam = "Luuk"
                         },
                         new
@@ -224,6 +235,7 @@ namespace ModellenBureau.API.Migrations
                             Postcode = "1111 LK",
                             Stad = "Diemen",
                             Taillewijdte = 81,
+                            Verified = false,
                             Voornaam = "Stefan"
                         });
                 });

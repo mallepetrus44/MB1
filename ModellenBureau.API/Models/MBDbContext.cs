@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ModellenBureau.Main.Shared;
+using ModellenBureau.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace ModellenBureau.API.Models
         {
 
         }
-
+        public DbSet<Admin> Admins { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<PhotoModel> PhotoModels { get; set; }
 
@@ -33,6 +33,8 @@ namespace ModellenBureau.API.Models
                 Adres = "Verdilaan 107",
                 Stad = "Vlissingen",
                 Postcode = "4384 LG",
+                Email ="",
+                Paswoord ="",
                 Logo =""
             });
             modelBuilder.Entity<Customer>().HasData(new Customer
@@ -46,7 +48,9 @@ namespace ModellenBureau.API.Models
                 Adres = "Uiterburen 13",
                 Stad = "Groningen",
                 Postcode = "9636 EC",
-                Logo=""
+                Email = "",
+                Paswoord = "",
+                Logo =""
             });
 
             // Seed data Photomodel
@@ -58,6 +62,8 @@ namespace ModellenBureau.API.Models
                 Adres = "Leemwierde 40",
                 Stad = "Almere",
                 Postcode = "1353 LT",
+                Email = "",
+                Paswoord = "",
                 PhotoModelID = 1,
                 Geboortedatum = DateTime.ParseExact("15/06/1985", "dd/MM/yyyy", null),
                 Geslacht = Geslacht.Vrouw,
@@ -75,6 +81,8 @@ namespace ModellenBureau.API.Models
                 Adres = "Oregondreef 102",
                 Stad = "Utrecht",
                 Postcode = "3565 BG",
+                Email = "",
+                Paswoord = "",
                 PhotoModelID = 2,
                 Geboortedatum = DateTime.ParseExact("23/08/1991", "dd/MM/yyyy", null),
                 Geslacht = Geslacht.Vrouw,
@@ -92,6 +100,8 @@ namespace ModellenBureau.API.Models
                 Adres = "Dollardstraat 2",
                 Stad = "Alkmaar",
                 Postcode = "1826 CS",
+                Email = "",
+                Paswoord = "",
                 PhotoModelID = 3,
                 Geboortedatum = DateTime.ParseExact("04/01/1980", "dd/MM/yyyy", null),
                 Geslacht = Geslacht.Man,
@@ -109,6 +119,8 @@ namespace ModellenBureau.API.Models
                 Adres = "Martin Luther Kinglaan 93",
                 Stad = "Diemen",
                 Postcode = "1111 LK",
+                Email = "",
+                Paswoord = "",
                 PhotoModelID = 4,
                 Geboortedatum = DateTime.ParseExact("25/11/1990", "dd/MM/yyyy", null),
                 Geslacht = Geslacht.Man,
@@ -117,6 +129,18 @@ namespace ModellenBureau.API.Models
                 Heupwijdte = 100,
                 Lengte = 185,
                 Fotos = ""
+            });
+            modelBuilder.Entity<Admin>().HasData(new Admin
+            {
+                AppUserId = 7,
+                AdminId =1,
+                Voornaam = "Admin",
+                Achternaam = "Beheerder",
+                Adres = "Karel Luther Queenlaan 12",
+                Stad = "Den Haag",
+                Postcode = "1212 DE",
+                Email = "",
+                Paswoord = "",
             });
         }
     }

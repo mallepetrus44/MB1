@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
-using ModellenBureau.Main.Shared;
+using ModellenBureau.Shared;
 using ModellenBureau.Server.Components;
 using ModellenBureau.Server.Services;
 using System;
@@ -14,12 +14,16 @@ namespace ModellenBureau.Server.Pages
         [Inject]
         public ICustomerDataService CustomerDataService { get; set; }
         public List<Customer> Customers { get; set; }
+        public User LoggedUser { get; set; } // ingelogde User
 
+        //public Admin Admin { get; set; }
         protected QuickRegisterCustomer QuickRegisterCustomer { get; set; }
 
         protected override async Task OnInitializedAsync()
         {
+            LoggedUser = new Customer();
             Customers = (await CustomerDataService.GetAllCustomers()).ToList();
+
         }
 
         public async void QuickRegisterCustomer_OnDialogClose()

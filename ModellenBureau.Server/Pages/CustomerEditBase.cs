@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
-using ModellenBureau.Main.Shared;
+using ModellenBureau.Shared;
 using ModellenBureau.Server.Services;
 using System;
 using System.Collections.Generic;

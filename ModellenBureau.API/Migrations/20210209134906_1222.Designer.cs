@@ -10,8 +10,8 @@ using ModellenBureau.API.Models;
 namespace ModellenBureau.API.Migrations
 {
     [DbContext(typeof(MBDbContext))]
-    [Migration("20210208104833_test")]
-    partial class test
+    [Migration("20210209134906_1222")]
+    partial class _1222
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,10 +43,18 @@ namespace ModellenBureau.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("KvkNummer")
                         .HasColumnType("int");
 
                     b.Property<string>("Logo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Paswoord")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -57,6 +65,9 @@ namespace ModellenBureau.API.Migrations
                     b.Property<string>("Stad")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Verified")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Voornaam")
                         .IsRequired()
@@ -74,10 +85,13 @@ namespace ModellenBureau.API.Migrations
                             Adres = "Verdilaan 107",
                             AppUserId = 1,
                             BtwNummer = "NL123456789B01",
+                            Email = "",
                             KvkNummer = 12345678,
                             Logo = "",
+                            Paswoord = "",
                             Postcode = "4384 LG",
                             Stad = "Vlissingen",
+                            Verified = false,
                             Voornaam = "Klaas"
                         },
                         new
@@ -87,10 +101,13 @@ namespace ModellenBureau.API.Migrations
                             Adres = "Uiterburen 13",
                             AppUserId = 2,
                             BtwNummer = "NL234567890B02",
+                            Email = "",
                             KvkNummer = 23456789,
                             Logo = "",
+                            Paswoord = "",
                             Postcode = "9636 EC",
                             Stad = "Groningen",
+                            Verified = false,
                             Voornaam = "Angelina"
                         });
                 });
@@ -116,6 +133,10 @@ namespace ModellenBureau.API.Migrations
                     b.Property<int>("Bovenwijdte")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Fotos")
                         .HasColumnType("nvarchar(max)");
 
@@ -134,6 +155,10 @@ namespace ModellenBureau.API.Migrations
                     b.Property<int>("Lengte")
                         .HasColumnType("int");
 
+                    b.Property<string>("Paswoord")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Postcode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -144,6 +169,9 @@ namespace ModellenBureau.API.Migrations
 
                     b.Property<int>("Taillewijdte")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Verified")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Voornaam")
                         .IsRequired()
@@ -161,15 +189,18 @@ namespace ModellenBureau.API.Migrations
                             Adres = "Leemwierde 40",
                             AppUserId = 3,
                             Bovenwijdte = 90,
+                            Email = "",
                             Fotos = "",
                             Geboortedatum = new DateTime(1985, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Geslacht = 1,
                             Heupwijdte = 90,
                             Leeftijd = 35,
                             Lengte = 178,
+                            Paswoord = "",
                             Postcode = "1353 LT",
                             Stad = "Almere",
                             Taillewijdte = 61,
+                            Verified = false,
                             Voornaam = "Fleur"
                         },
                         new
@@ -179,15 +210,18 @@ namespace ModellenBureau.API.Migrations
                             Adres = "Oregondreef 102",
                             AppUserId = 4,
                             Bovenwijdte = 86,
+                            Email = "",
                             Fotos = "",
                             Geboortedatum = new DateTime(1991, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Geslacht = 1,
                             Heupwijdte = 87,
                             Leeftijd = 29,
                             Lengte = 175,
+                            Paswoord = "",
                             Postcode = "3565 BG",
                             Stad = "Utrecht",
                             Taillewijdte = 59,
+                            Verified = false,
                             Voornaam = "Lynn"
                         },
                         new
@@ -197,15 +231,18 @@ namespace ModellenBureau.API.Migrations
                             Adres = "Dollardstraat 2",
                             AppUserId = 5,
                             Bovenwijdte = 101,
+                            Email = "",
                             Fotos = "",
                             Geboortedatum = new DateTime(1980, 1, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Geslacht = 0,
                             Heupwijdte = 99,
                             Leeftijd = 41,
                             Lengte = 184,
+                            Paswoord = "",
                             Postcode = "1826 CS",
                             Stad = "Alkmaar",
                             Taillewijdte = 81,
+                            Verified = false,
                             Voornaam = "Luuk"
                         },
                         new
@@ -215,16 +252,80 @@ namespace ModellenBureau.API.Migrations
                             Adres = "Martin Luther Kinglaan 93",
                             AppUserId = 6,
                             Bovenwijdte = 100,
+                            Email = "",
                             Fotos = "",
                             Geboortedatum = new DateTime(1990, 11, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Geslacht = 0,
                             Heupwijdte = 100,
                             Leeftijd = 30,
                             Lengte = 185,
+                            Paswoord = "",
                             Postcode = "1111 LK",
                             Stad = "Diemen",
                             Taillewijdte = 81,
+                            Verified = false,
                             Voornaam = "Stefan"
+                        });
+                });
+
+            modelBuilder.Entity("ModellenBureau.Shared.Admin", b =>
+                {
+                    b.Property<int>("AdminId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Achternaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Adres")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Paswoord")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Postcode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Stad")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Verified")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Voornaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AdminId");
+
+                    b.ToTable("Admins");
+
+                    b.HasData(
+                        new
+                        {
+                            AdminId = 1,
+                            Achternaam = "Beheerder",
+                            Adres = "Karel Luther Queenlaan 12",
+                            AppUserId = 7,
+                            Email = "",
+                            Paswoord = "",
+                            Postcode = "1212 DE",
+                            Stad = "Den Haag",
+                            Verified = false,
+                            Voornaam = "Admin"
                         });
                 });
 #pragma warning restore 612, 618

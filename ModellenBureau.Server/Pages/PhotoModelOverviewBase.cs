@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
-using ModellenBureau.Main.Shared;
+using ModellenBureau.Shared;
 using ModellenBureau.Server.Components;
 using ModellenBureau.Server.Services;
 
