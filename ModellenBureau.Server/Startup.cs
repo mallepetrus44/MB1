@@ -33,6 +33,10 @@ namespace ModellenBureau.Server
             {
                 client.BaseAddress = new Uri("https://localhost:44340/");
             });
+            services.AddHttpClient<IPhotoModelDataService, PhotoModelDataService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:44340/");
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

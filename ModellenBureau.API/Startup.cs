@@ -32,7 +32,7 @@ namespace ModellenBureau.API
 
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IPhotoModelRepository, PhotoModelRepository>();
-            //services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
 
             services.AddCors(options =>
             {
