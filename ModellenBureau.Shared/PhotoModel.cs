@@ -17,7 +17,7 @@ namespace ModellenBureau.Main.Shared
         
 
         [Required]
-        //[DataType(DataType.Date)]
+        [DataType(DataType.Date)]
         public DateTime Geboortedatum { get; set; }
         [Required]
         public Geslacht Geslacht { get; set; }
@@ -31,7 +31,7 @@ namespace ModellenBureau.Main.Shared
         [Required]
         public int Lengte { get; set; }
 
-        //[DataType(DataType.ImageUrl)]
+        [DataType(DataType.ImageUrl)]
         public string Fotos { get; set; }
     }
 }

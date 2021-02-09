@@ -23,7 +23,13 @@ namespace ModellenBureau.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetPotoModelById([FromBody] PhotoModel photoModel)
+        public IActionResult GetPhotoModelById(int id)
+        {
+            return Ok(_photoModelRepository.GetPhotoModelById(id));
+        }
+
+        [HttpPost]
+        public IActionResult CreatePhotoModel([FromBody] PhotoModel photoModel)
         {
             if (photoModel == null)
                 return BadRequest();
