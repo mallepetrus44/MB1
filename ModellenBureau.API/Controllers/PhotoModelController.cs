@@ -28,17 +28,17 @@ namespace ModellenBureau.API.Controllers
             if (photoModel == null)
                 return BadRequest();
 
-            if (photoModel.Voornaam == string.Empty || photoModel.Achternaam == string.Empty)
-            {
-                ModelState.AddModelError("Naam/Voornaam", "De naam kan niet leeg zijn");
-            }
+            //if (photoModel.Voornaam == string.Empty || photoModel.Achternaam == string.Empty)
+            //{
+            //    ModelState.AddModelError("Naam/Voornaam", "De naam kan niet leeg zijn");
+            //}
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var createdPhotoModel = _photoModelRepository.AddPhotoModel(photoModel);
 
-            return Created("Foto Model", createdPhotoModel);
+            return Created("photomodel", createdPhotoModel);
         }
 
         [HttpPut]
@@ -47,10 +47,10 @@ namespace ModellenBureau.API.Controllers
             if (photoModel == null)
                 return BadRequest();
 
-            if (photoModel.Voornaam == string.Empty || photoModel.Achternaam == string.Empty)
-            {
-                ModelState.AddModelError("Naam/Voornaam", "De naam kan niet leeg zijn");
-            }
+            //if (photoModel.Voornaam == string.Empty || photoModel.Achternaam == string.Empty)
+            //{
+            //    ModelState.AddModelError("Naam/Voornaam", "De naam kan niet leeg zijn");
+            //}
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
